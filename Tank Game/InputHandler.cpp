@@ -18,6 +18,7 @@ void WarningMessage::Display(std::string Message)
 
 		if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON))
 		{
+			//get mouse position
 			Vector2 MousePosition = GetMousePosition();
 			//yes pressed
 			if (MousePosition.x > 400 && MousePosition.x < 480)
