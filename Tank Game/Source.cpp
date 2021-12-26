@@ -20,6 +20,7 @@ int main()
 		ClearBackground(RAYWHITE);
 
 		B.DrawBoard();
+		B.RemoveDeadPlayers();
 
 		//Send input
 		Input::GetInput(B);

@@ -1,4 +1,10 @@
-﻿  InputHandler.cpp
+﻿  Board.cpp
+A:\source\Tank Game\Tank Game\Board\Board.cpp(13,21): warning C4018: '<': signed/unsigned mismatch
+A:\source\Tank Game\Tank Game\Board\Board.cpp(40,20): warning C4018: '<': signed/unsigned mismatch
+A:\source\Tank Game\Tank Game\Board\Board.cpp(96,20): warning C4018: '<': signed/unsigned mismatch
+A:\source\Tank Game\Tank Game\Board\Board.cpp(104,20): warning C4018: '<': signed/unsigned mismatch
+A:\source\Tank Game\Tank Game\Board\Board.cpp(116,20): warning C4018: '<': signed/unsigned mismatch
+  InputHandler.cpp
 A:\source\Tank Game\Tank Game\InputHandler.cpp(60,51): warning C4244: 'argument': conversion from 'float' to 'uint8_t', possible loss of data
 A:\source\Tank Game\Tank Game\InputHandler.cpp(60,34): warning C4244: 'argument': conversion from 'float' to 'uint8_t', possible loss of data
 A:\source\Tank Game\Tank Game\InputHandler.cpp(75,22): warning C4018: '<': signed/unsigned mismatch
@@ -7,4 +13,8 @@ A:\source\Tank Game\Tank Game\InputHandler.cpp(113,22): warning C4018: '<': sign
 A:\source\Tank Game\Tank Game\InputHandler.cpp(132,22): warning C4018: '<': signed/unsigned mismatch
 A:\source\Tank Game\Tank Game\InputHandler.cpp(149,21): warning C4018: '<': signed/unsigned mismatch
 A:\source\Tank Game\Tank Game\InputHandler.cpp(163,21): warning C4018: '<': signed/unsigned mismatch
+  Player.cpp
+  Source.cpp
+A:\source\Tank Game\Tank Game\Source.cpp(10,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Generating Code...
   Tank Game.vcxproj -> A:\source\Tank Game\Debug\Tank Game.exe

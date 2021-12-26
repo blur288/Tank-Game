@@ -15,5 +15,7 @@ public:
 	void DrawBoard();
 
 	void ClickPlayer(uint8_t x, uint8_t y);
+
+	void RemoveDeadPlayers();
 };
 

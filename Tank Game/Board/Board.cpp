@@ -110,3 +110,14 @@ void Board::ClickPlayer(uint8_t x, uint8_t y)
 	}
 	
 }
+
+void Board::RemoveDeadPlayers()
+{
+	for (int i = 0; i < Players.size(); i++)
+	{
+		if (Players[i].HealthPoints == 0)
+		{
+			Players.erase(Players.begin() + i);
+		}
+	}
+}
