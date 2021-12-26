@@ -12,7 +12,6 @@ int main()
 	InitWindow(1000, 500, "Tank Game");
 
 	Board B;
-	WarningMessage WM;
 
 	while (!WindowShouldClose())
 	{
@@ -21,8 +20,6 @@ int main()
 		ClearBackground(RAYWHITE);
 
 		B.DrawBoard();
-
-		WM.Display("Confirm Move?");
 
 		//Send input
 		Input::GetInput(B);

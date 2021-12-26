@@ -44,6 +44,8 @@ void WarningMessage::Display(std::string Message)
 
 void Input::GetInput(Board& board)
 {
+	Player* Client = &board.Players[0];
+
 	if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON))
 	{
 		Vector2 MousePosition = GetMousePosition();
@@ -57,9 +59,88 @@ void Input::GetInput(Board& board)
 
 		board.ClickPlayer(MousePosition.x, MousePosition.y);
 	}
-	if (IsMouseButtonPressed(KEY_LEFT))
+	//cycles player
+	if (IsKeyPressed(KEY_N))
 	{
-
+		board.Players.push_back(*Client);
+		board.Players.erase(board.Players.begin());
+	}
+	//Player movement
+	//Up
+	if (IsKeyPressed(KEY_W))
+	{
+		if (Client->ActionPoints > 0 && Client->Y != 0)
+		{
+			bool CanMove = 1;
+			for (int i = 0; i < board.Players.size(); i++)
+			{
+				if (board.Players[i].X == Client->X && board.Players[i].Y == Client->Y - 1)
+				{
+					CanMove = 0;
+				}
+			}
+			if (CanMove)
+			{
+				Client->Y--;
+			}
+		}
+	}
+	//Down
+	if (IsKeyPressed(KEY_S))
+	{
+		if (Client->ActionPoints > 0 && Client->Y != 11)
+		{
+			bool CanMove = 1;
+			for (int i = 0; i < board.Players.size(); i++)
+			{
+				if (board.Players[i].X == Client->X && board.Players[i].Y == Client->Y + 1)
+				{
+					CanMove = 0;
+				}
+			}
+			if (CanMove)
+			{
+				Client->Y++;
+			}
+		}
+	}
+	//Left
+	if (IsKeyPressed(KEY_A))
+	{
+		if (Client->ActionPoints > 0 && Client->X != 0)
+		{
+			bool CanMove = 1;
+			for (int i = 0; i < board.Players.size(); i++)
+			{
+				if (board.Players[i].X == Client->X - 1 && board.Players[i].Y == Client->Y)
+				{
+					CanMove = 0;
+				}
+			}
+			if (CanMove)
+			{
+				Client->X--;
+			}
+		}
+	}
+	//Right
+	if (IsKeyPressed(KEY_D))
+	{
+		if (Client->ActionPoints > 0 && Client->X != 19)
+		{
+			bool CanMove = 1;
+			for (int i = 0; i < board.Players.size(); i++)
+			{
+				if (board.Players[i].X == Client->X + 1 && board.Players[i].Y == Client->Y)
+				{
+					CanMove = 0;
+				}
+			}
+			if (CanMove)
+			{
+				Client->X++;
+			}
+		}
 	}
 }
 
