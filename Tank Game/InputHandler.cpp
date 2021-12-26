@@ -57,9 +57,11 @@ void Input::GetInput(Board& board)
 
 		board.ClickPlayer(MousePosition.x, MousePosition.y);
 	}
-	if (IsMouseButtonPressed(KEY_LEFT))
+	//cycles player
+	if (IsKeyPressed(KEY_N))
 	{
-
+		board.Players.push_back(board.Players[0]);
+		board.Players.erase(board.Players.begin());
 	}
 }
 
