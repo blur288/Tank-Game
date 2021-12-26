@@ -89,8 +89,7 @@ void Board::DrawBoard()
 		}
 	}
 }
-
-//info box is 
+ 
 void Board::ClickPlayer(uint8_t x, uint8_t y)
 {
 	//Get rid of old clicked on players
