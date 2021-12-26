@@ -142,6 +142,36 @@ void Input::GetInput(Board& board)
 			}
 		}
 	}
+
+	//Attack / give
+	if (IsKeyPressed(KEY_F))
+	{
+		for (int i = 0; i < board.Players.size(); i++)
+		{
+			if (board.Players[i].IsClicked)
+			{
+				if (Client->ActionPoints > 0)
+				{
+					--board.Players[i].HealthPoints;
+					--Client->ActionPoints;
+				}
+			}
+		}
+	}
+	if (IsKeyPressed(KEY_G))
+	{
+		for (int i = 0; i < board.Players.size(); i++)
+		{
+			if (board.Players[i].IsClicked)
+			{
+				if (Client->ActionPoints > 0)
+				{
+					++board.Players[i].ActionPoints;
+					--Client->ActionPoints;
+				}
+			}
+		}
+	}
 }
 
 bool WarningMessage::GetResult()
