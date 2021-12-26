@@ -1,2 +1,0 @@
-A:\source\Tank Game\Tank Game\Debug\Tank Game.vcxproj.CopyComplete
-C:\source\Tank-Game\Tank Game\Debug\Tank Game.vcxproj.CopyComplete

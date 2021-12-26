@@ -1,7 +1,0 @@
-﻿  InputHandler.cpp
-C:\source\Tank-Game\Tank Game\InputHandler.cpp(58,51): warning C4244: 'argument': conversion from 'float' to 'uint8_t', possible loss of data
-C:\source\Tank-Game\Tank Game\InputHandler.cpp(58,34): warning C4244: 'argument': conversion from 'float' to 'uint8_t', possible loss of data
-  Source.cpp
-C:\source\Tank-Game\Tank Game\Source.cpp(10,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Generating Code...
-  Tank Game.vcxproj -> C:\source\Tank-Game\Debug\Tank Game.exe
