@@ -37,9 +37,10 @@ void Board::DrawBoard()
 
 
 	//Draw Players
-	for (int i = 1; i < this->Players.size(); i++)
+	for (int i = 0; i < this->Players.size(); i++)
 	{
 		DrawRectangle(Players[i].X * 50 + 1, Players[i].Y * 42 + 1, 50, 42, BLUE);
+		DrawRectangle(Players[0].X * 50 + 1, Players[0].Y * 42 + 1, 50, 42, GREEN);
 		if (Players[i].IsClicked)
 		{
 			//If player is at the top player info is out of window
@@ -73,19 +74,6 @@ void Board::DrawBoard()
 				Action = Action + "Power: " + std::to_string(Players[i].ActionPoints);
 				DrawText(Action.c_str(), Players[i].X * 50 - 50, Players[i].Y * 42 + 60, 10, RED);
 			}
-		}
-		DrawRectangle(Players[0].X * 50 + 1, Players[0].Y * 42 + 1, 50, 42, GREEN);
-	}
-	if (Players[0].IsClicked)
-	{
-		if (Players[0].Y > 1)
-		{
-			DrawRectangle(Players[0].X * 50 - 50, Players[0].Y * 42 - 84, 150, 84, GRAY);
-		}
-		else
-		{
-			//Draw Background rectangle
-			DrawRectangle(Players[0].X * 50 - 50, Players[0].Y * 42 + 42, 150, 84, GRAY);
 		}
 	}
 }
